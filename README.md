@@ -1,4 +1,4 @@
-[whats-trending-on-GitHub] ("https://divvya007.github.io/whats-trending-on-GitHub/")
+# [whats-trending-on-GitHub] (https://divvya007.github.io/whats-trending-on-GitHub/)
 
 ## About Project - 
 
