@@ -1,0 +1,13 @@
+.repoContainer--style {
+  display: grid;
+
+  margin: 50px;
+  border: 2px solid black;
+  padding: 35px;
+}
+#text-box {
+  align-content: center;
+  font-weight: 800;
+  font-style: italic;
+  padding: 5%;
+}
