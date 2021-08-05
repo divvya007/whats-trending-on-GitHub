@@ -1,3 +1,7 @@
+body {
+  background-color: #0d1117;
+}
+
 .repoContainer--style {
   display: grid;
 
@@ -10,4 +14,34 @@
   font-weight: 800;
   font-style: italic;
   padding: 5%;
+}
+.repoHead--blue {
+  color: #1f6feb;
+}
+
+#repo__description--white {
+  color: #949ba3;
+}
+#repoBasicInfo--white {
+  color: #949ba3;
+}
+
+.forkIconContainer--style-size {
+  padding: 20px;
+  margin-top: 2px;
+}
+
+#text-box__heading--white {
+  color: #c9d1d9;
+}
+#text-box__heading--gray {
+  color: #525861;
+}
+
+#text-box__heading {
+  align-content: center;
+}
+
+.text-box {
+  text-align: center;
 }
