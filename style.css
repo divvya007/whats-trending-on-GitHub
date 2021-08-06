@@ -1,13 +1,48 @@
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
-  background-color: #0d1117;
+  background-color: #1a202a;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+a {
+  text-decoration: none;
+  background-color: #00000000;
+}
+a:visited {
+  text-decoration-color: none !important;
+}
+
+h4 {
+  margin: 0px;
+}
+
+.listElDiv__flexProp {
+  display: flex;
+  flex-direction: column;
+  max-width: 1012px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.outer-div__size {
+  padding-top: 40px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 
 .repoContainer--style {
-  display: grid;
-
-  margin: 50px;
-  border: 2px solid black;
-  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(70, 69, 69);
+  padding: 25px;
 }
 #text-box {
   align-content: center;
@@ -15,14 +50,16 @@ body {
   font-style: italic;
   padding: 5%;
 }
+
 .repoHead--blue {
-  color: #1f6feb;
+  font-size: 135%;
+  color: #58a6ff;
 }
 
-#repo__description--white {
+.repo__description--white {
   color: #949ba3;
 }
-#repoBasicInfo--white {
+.repoBasicInfo--white {
   color: #949ba3;
 }
 
@@ -44,4 +81,36 @@ body {
 
 .text-box {
   text-align: center;
+}
+
+.repoHeadLink--white {
+  color: #c9d1d9;
+}
+.starContainer--gray {
+  color: #525861;
+}
+#totalStars--gray {
+  color: #c9d1d9;
+}
+.totalStars--style {
+  text-decoration: none;
+}
+
+#Head__big {
+  flex-grow: 1;
+}
+
+.StarDivContainer__container {
+  justify-content: flex-end !important;
+  padding: 12px;
+  width: fit-content;
+  border: 1px solid rgb(92, 72, 72);
+}
+
+.localStar__container {
+  align-self: flex-end;
+  /* justify-content: flex-end !important; */
+  color: white;
+  padding: 3px 12px;
+  border: 1px solid white;
 }

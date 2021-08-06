@@ -1,5 +1,6 @@
 function List(mainContainer) {
   this.listEl = document.createElement("div");
+  this.listEl.className = "listElDiv__flexProp";
   this.trendingDataList = [];
   mainContainer.append(this.listEl);
 }
