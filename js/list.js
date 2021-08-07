@@ -1,5 +1,8 @@
 function List(mainContainer) {
   this.listEl = document.createElement("div");
+  this.boxHead = document.createElement("div");
+  this.boxHead.className = "box-header";
+  this.listEl.append(this.boxHead);
   this.listEl.className = "listElDiv";
   this.trendingDataList = [];
   mainContainer.append(this.listEl);
