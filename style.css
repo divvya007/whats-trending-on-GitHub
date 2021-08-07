@@ -41,10 +41,11 @@ h4 {
 
 .repoContainer--style {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 2px solid rgb(70, 69, 69);
   padding: 25px;
 }
+
 .text-box {
   padding: 5%;
   border-bottom: 1px solid rgb(70, 69, 69);
@@ -100,23 +101,10 @@ h4 {
   text-decoration: none;
 }
 
-#Head__big {
-  flex-grow: 1;
-}
-
-.StarDivContainer__container {
-  justify-content: flex-end !important;
-  padding: 12px;
-  width: fit-content;
-  border: 1px solid rgb(92, 72, 72);
-}
-
 .localStar__container {
-  align-self: flex-end;
-  /* justify-content: flex-end !important; */
-  color: white;
+  color: #949ba3;
+  cursor: pointer;
   padding: 3px 12px;
-  border: 1px solid white;
 }
 
 .listEl__box-header {
@@ -147,4 +135,8 @@ h4 {
 .listEl__boxHeader__langugae__span__drop-down-btn {
   cursor: pointer;
   padding: 2px;
+}
+
+.article__head-para-repo-container {
+  flex: 1;
 }

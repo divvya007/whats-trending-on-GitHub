@@ -3,26 +3,16 @@ function RepoItems(containerEl, dataItems) {
   this.repoContainer = document.createElement("article");
   this.repoContainer.className = "repoContainer--style";
 
-  // local star
-  this.localStar = document.createElement("div");
-  this.localStar.className = "localStar__container";
-
-  // icon localStar
-
-  this.localStarSpan = document.createElement("span");
-  this.localStarIcon = document.createElement("i");
-  this.localStarIcon.innerHTML = '<i class="far fa-star"></i>';
-  this.localStarSpan.innerText = "Star";
-
-  this.localStarSpan.append(this.localStarIcon);
-  this.localStar.append(this.localStarSpan);
-  this.repoContainer.append(this.localStar);
+  //  container for head, para description, repoBasicInfo
+  this.headParaRepoContainer = document.createElement("div");
+  this.headParaRepoContainer.className = "article__head-para-repo-container";
+  this.repoContainer.append(this.headParaRepoContainer);
 
   //   head tag
   this.repoHead = document.createElement("h4");
   this.repoHead.id = "Head__big";
   this.repoHead.className = "repoHead--blue";
-  this.repoContainer.append(this.repoHead);
+  this.headParaRepoContainer.append(this.repoHead);
   //  anchor tag for adding link
   this.repoHeadLink = document.createElement("a");
 
@@ -44,7 +34,9 @@ function RepoItems(containerEl, dataItems) {
     this.repoDescription.innerText = dataItems.description;
   }
 
-  this.repoContainer.append(this.repoDescription);
+  this.headParaRepoContainer.append(this.repoDescription);
+
+  //repo basic info for language, star,fork
 
   this.repoBasicInfo = document.createElement("div");
   this.repoBasicInfo.className = "repoBasicInfo--white";
@@ -96,7 +88,20 @@ function RepoItems(containerEl, dataItems) {
   this.forkCount.innerHTML = dataItems.forks_count;
   this.forkIconContainer.append(this.forkCount);
 
-  this.repoContainer.append(this.repoBasicInfo);
+  this.headParaRepoContainer.append(this.repoBasicInfo);
+
+  // icon localStorageStar
+  this.localStar = document.createElement("div");
+  this.localStar.className = "localStar__container";
+  //   span
+  this.localStarSpan = document.createElement("span");
+  this.localStarIcon = document.createElement("i");
+  this.localStarIcon.innerHTML = '<i class="far fa-star"></i>';
+  this.localStarSpan.innerText = "Star";
+
+  this.localStarSpan.append(this.localStarIcon);
+  this.localStar.append(this.localStarSpan);
+  this.repoContainer.append(this.localStar);
 
   containerEl.append(this.repoContainer);
 }
