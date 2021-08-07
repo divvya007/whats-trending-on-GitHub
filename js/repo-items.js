@@ -13,23 +13,21 @@ function RepoItems(containerEl, dataItems) {
   this.repoHead.id = "Head__big";
   this.repoHead.className = "repoHead--blue";
   this.headParaRepoContainer.append(this.repoHead);
+
   //  anchor tag for adding link
   this.repoHeadLink = document.createElement("a");
-
   this.repoHeadLink.innerText = dataItems.full_name;
   this.repoHeadLink.href = dataItems.html_url;
 
   this.repoHead.append(this.repoHeadLink);
 
   // para tag for description
-
   this.repoDescription = document.createElement("p");
-
   this.repoDescription.className = "repo__description";
   this.repoDescription.className = "repo__description--white";
 
   if (dataItems.description === null) {
-    this.repoDescription.style.display = "none";
+    this.repoDescription.style.display = " ";
   } else {
     this.repoDescription.innerText = dataItems.description;
   }
@@ -37,7 +35,6 @@ function RepoItems(containerEl, dataItems) {
   this.headParaRepoContainer.append(this.repoDescription);
 
   //repo basic info for language, star,fork
-
   this.repoBasicInfo = document.createElement("div");
   this.repoBasicInfo.className = "repoBasicInfo--white";
   this.language = document.createElement("span");
@@ -50,8 +47,7 @@ function RepoItems(containerEl, dataItems) {
 
   this.repoBasicInfo.append(this.language);
 
-  // total stars <a> tag
-  //   and its icon
+  // total stars <a> tag  and its icon
   this.starContainer = document.createElement("span");
   this.starContainer.className = "starContainer--gray";
   if (dataItems.language === null) {
@@ -62,7 +58,6 @@ function RepoItems(containerEl, dataItems) {
   this.starsIcon = document.createElement("i");
   this.starsIcon.innerHTML = '<i class="far fa-star"></i>';
   this.starContainer.append(this.starsIcon);
-  //   this.starContainer.append(this.starsIcon);
 
   this.totalStars = document.createElement("a");
   this.totalStars.id = "totalStars--gray";
@@ -82,17 +77,16 @@ function RepoItems(containerEl, dataItems) {
   this.forkIconContainer.append(this.forkIcon);
 
   //   fork count
-
   this.forkCount = document.createElement("a");
   this.forkCount.style = "padding:4px";
   this.forkCount.innerHTML = dataItems.forks_count;
   this.forkIconContainer.append(this.forkCount);
-
   this.headParaRepoContainer.append(this.repoBasicInfo);
 
   // icon localStorageStar
   this.localStar = document.createElement("div");
   this.localStar.className = "localStar__container";
+
   //   span
   this.localStarSpan = document.createElement("span");
   this.localStarIcon = document.createElement("i");
