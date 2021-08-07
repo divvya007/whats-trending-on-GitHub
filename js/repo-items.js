@@ -3,24 +3,9 @@ function RepoItems(containerEl, dataItems) {
   this.repoContainer = document.createElement("article");
   this.repoContainer.className = "repoContainer--style";
 
-  // container for star
-  //   this.StarDivContainer = document.createElement("div");
-  //   this.StarDivContainer.innerText = "star";
-  //   this.StarDivContainer.className = "StarDivContainer__container";
-  //   this.repoContainer.append(this.StarDivContainer);
-
-  //   // icon localStar
-
-  //   this.localStarSpan = document.createElement("span");
-  //   this.localStarIcon = document.createElement("i");
-  //   this.localStarIcon.innerHTML = '<i class="far fa-star"></i>';
-  //   this.localStarSpan.append(this.localStarIcon);
-  //   //   this.localStar.append(this.localStarSpan);
-
   // local star
   this.localStar = document.createElement("div");
   this.localStar.className = "localStar__container";
-  //   this.localStar.innerText = "Star";
 
   // icon localStar
 
@@ -40,7 +25,6 @@ function RepoItems(containerEl, dataItems) {
   this.repoContainer.append(this.repoHead);
   //  anchor tag for adding link
   this.repoHeadLink = document.createElement("a");
-  //   this.repoHeadLink.className = "repoHeadLink--white";
 
   this.repoHeadLink.innerText = dataItems.full_name;
   this.repoHeadLink.href = dataItems.html_url;
