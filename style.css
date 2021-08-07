@@ -23,7 +23,7 @@ h4 {
   margin: 0px;
 }
 
-.listElDiv__flexProp {
+.listElDiv {
   display: flex;
   flex-direction: column;
   max-width: 1012px;
