@@ -33,6 +33,7 @@ h4 {
 }
 
 .outer-div__size {
+  margin-top: 20px;
   padding-top: 40px !important;
   padding-left: 16px !important;
   padding-right: 16px !important;
@@ -44,11 +45,14 @@ h4 {
   border: 2px solid rgb(70, 69, 69);
   padding: 25px;
 }
-#text-box {
+.text-box {
+  padding: 5%;
+  border-bottom: 1px solid rgb(70, 69, 69);
   align-content: center;
   font-weight: 800;
   font-style: italic;
-  padding: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .repoHead--blue {
@@ -115,11 +119,15 @@ h4 {
   border: 1px solid white;
 }
 
-.box-header {
+.listEl__box-header {
   border: 2px solid rgb(92, 83, 83);
   color: white;
   max-width: 1012px;
   margin-left: 0px;
   margin-right: 0px;
   padding: 36px;
+}
+.listEl__box-header__spoken-lang {
+  padding: 22px;
+  border: 1px solid rgb(92, 72, 72);
 }
