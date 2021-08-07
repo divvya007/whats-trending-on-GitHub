@@ -5,6 +5,7 @@
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       list.discoverTrend(data.items);
     });
 })();
