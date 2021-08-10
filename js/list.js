@@ -14,7 +14,7 @@ function List(mainContainer) {
   this.btnSpan.className = "listEl__boxHeader__langugae__span";
   this.language.append(this.btnSpan);
 
-  //   drop down btn
+  //   btn
   this.dropDownBtn = document.createElement("button");
   this.dropDownBtn.className =
     "listEl__boxHeader__langugae__span__drop-down-btn--gray";
@@ -56,5 +56,14 @@ List.prototype = {
       this.dropDownMenuContainer.append(this.menuContent);
     }
     this.dropDownMenuContainer.style.display = "none";
+
+    // this.dropDownBtn.addEventListener("click", () => {
+    //   return (this.dropDownMenuContainer.style.display = "block");
+    // });
+    this.dropDownBtn.addEventListener("click", myBtn.bind(this));
+    function myBtn() {
+      console.log(this);
+      return (this.dropDownMenuContainer.style.display = "block");
+    }
   },
 };
