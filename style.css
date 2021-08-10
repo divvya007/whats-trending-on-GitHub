@@ -144,13 +144,24 @@ h4 {
 }
 
 .btn__btn-container {
-  background-color: white;
-  border: 2px solid white;
+  background-color: #1c2128;
+  color: #c9d1d9;
+  border: 2px solid #1c2128;
+  border-radius: 6px;
   overflow: auto;
   max-height: 400px;
-  width: 168px;
-  padding: 15px;
+  width: 300px;
+  padding: 8px 8px 8px 30px;
   position: absolute;
   z-index: 1;
-  /* margin: auto; */
+}
+
+.btn-container__menu-content {
+  cursor: pointer;
+  border: 1px solid rgb(92 72 72 / 35%);
+  margin: 0;
+  padding: 8px;
+}
+.btn-container__menu-content:hover {
+  background-color: #1f6feb;
 }

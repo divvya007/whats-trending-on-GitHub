@@ -48,16 +48,19 @@ List.prototype = {
     console.log(this.contentMenuArray);
     for (let i = 0; i < this.contentMenuArray.length; i++) {
       this.menuContent = document.createElement("p");
+      this.menuContent.className = "btn-container__menu-content";
       this.menuContent.append(this.contentMenuArray[i]);
       this.dropDownMenuContainer.append(this.menuContent);
     }
     this.dropDownMenuContainer.style.display = "none";
+
     this.dropDownBtn.addEventListener("click", myBtn.bind(this));
     function myBtn() {
-      return (this.dropDownMenuContainer.style.display = "block");
+      if (this.dropDownMenuContainer.style.display !== "block") {
+        this.dropDownMenuContainer.style.display = "block";
+      } else if (this.dropDownMenuContainer.style.display === "block") {
+        this.dropDownMenuContainer.style.display = "none";
+      }
     }
-    // document.getElementById("body").addEventListener("click", () => {
-    //   this.dropDownMenuContainer.style.display = "none";
-    // });
   },
 };
