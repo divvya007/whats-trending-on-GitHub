@@ -49,8 +49,12 @@ List.prototype = {
     for (let i = 0; i < this.contentMenuArray.length; i++) {
       this.menuContent = document.createElement("p");
       this.menuContent.className = "btn-container__menu-content";
-      this.menuContent.append(this.contentMenuArray[i]);
-      this.dropDownMenuContainer.append(this.menuContent);
+      if (this.contentMenuArray[i] === null) {
+        this.menuContent.style.display = "none";
+      } else {
+        this.menuContent.append(this.contentMenuArray[i]);
+        this.dropDownMenuContainer.append(this.menuContent);
+      }
     }
     this.dropDownMenuContainer.style.display = "none";
 
