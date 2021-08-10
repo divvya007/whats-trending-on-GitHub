@@ -25,12 +25,8 @@ function List(mainContainer) {
 
   // div for drop down menu
   this.dropDownMenuContainer = document.createElement("div");
-  this.dropDownMenuContainer.innerText = "language for repo";
   this.dropDownMenuContainer.className = "btn__btn-container";
   this.btnSpan.append(this.dropDownMenuContainer);
-
-  //   this.menuContent = document.createElement("a");
-  //   this.dropDownMenuContainer.append(this.menuContent);
 
   this.boxHead.append(this.language);
   this.listEl.append(this.boxHead);
@@ -56,14 +52,12 @@ List.prototype = {
       this.dropDownMenuContainer.append(this.menuContent);
     }
     this.dropDownMenuContainer.style.display = "none";
-
-    // this.dropDownBtn.addEventListener("click", () => {
-    //   return (this.dropDownMenuContainer.style.display = "block");
-    // });
     this.dropDownBtn.addEventListener("click", myBtn.bind(this));
     function myBtn() {
-      console.log(this);
       return (this.dropDownMenuContainer.style.display = "block");
     }
+    // document.getElementById("body").addEventListener("click", () => {
+    //   this.dropDownMenuContainer.style.display = "none";
+    // });
   },
 };
