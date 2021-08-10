@@ -23,18 +23,38 @@ function List(mainContainer) {
   this.dropDownBtn.innerText = "Any";
   this.btnSpan.append(this.dropDownBtn);
 
+  // div for drop down menu
+  this.dropDownMenuContainer = document.createElement("div");
+  this.dropDownMenuContainer.innerText = "language for repo";
+  this.dropDownMenuContainer.className = "btn__btn-container";
+  this.btnSpan.append(this.dropDownMenuContainer);
+
+  //   this.menuContent = document.createElement("a");
+  //   this.dropDownMenuContainer.append(this.menuContent);
+
   this.boxHead.append(this.language);
   this.listEl.append(this.boxHead);
   this.listEl.className = "listElDiv";
   this.trendingDataList = [];
+  this.contentMenuArray = [];
   mainContainer.append(this.listEl);
 }
 
 List.prototype = {
   discoverTrend: function (dataElements) {
     this.trendingDataList = dataElements.map((dataItem) => {
-      console.log(dataItem);
+      this.contentMenuArray.push(dataItem.language);
+      //   console.log(this.contentMenuArray);
       return new RepoItems(this.listEl, dataItem);
     });
+  },
+  dropDownLanguage: function () {
+    console.log(this.contentMenuArray);
+    for (let i = 0; i < this.contentMenuArray.length; i++) {
+      this.menuContent = document.createElement("p");
+      this.menuContent.append(this.contentMenuArray[i]);
+      this.dropDownMenuContainer.append(this.menuContent);
+    }
+    this.dropDownMenuContainer.style.display = "none";
   },
 };

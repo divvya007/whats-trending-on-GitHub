@@ -7,5 +7,6 @@
     .then((data) => {
       console.log(data);
       list.discoverTrend(data.items);
+      list.dropDownLanguage();
     });
 })();

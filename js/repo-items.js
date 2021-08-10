@@ -1,4 +1,5 @@
 function RepoItems(containerEl, dataItems) {
+  //   console.log(menuContent);
   // article tag for repoItems
   this.repoContainer = document.createElement("article");
   this.repoContainer.className = "repoContainer--style";
