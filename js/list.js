@@ -7,7 +7,7 @@ function List(mainContainer) {
   this.language = document.createElement("div");
   this.language.className = "listEl__box-header__language";
   this.language.className = "listEl__box-header__language--gray";
-  this.language.innerText = "filter language: ";
+  this.language.innerText = "Language:";
 
   //   span for btn
   this.btnSpan = document.createElement("span");
@@ -27,6 +27,7 @@ function List(mainContainer) {
   this.dropDownMenuContainer = document.createElement("div");
   this.dropDownMenuContainer.className = "btn__btn-container";
   this.btnSpan.append(this.dropDownMenuContainer);
+
   // text box div for drop down menu
   this.textBoxOfMenu = document.createElement("div");
   this.textBoxOfMenu.className = "Menu__textBoxOfMenu";
