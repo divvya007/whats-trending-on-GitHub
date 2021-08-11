@@ -44,8 +44,8 @@ List.prototype = {
       return new RepoItems(this.listEl, dataItem);
     });
   },
+
   dropDownLanguage: function () {
-    console.log(this.contentMenuArray);
     for (let i = 0; i < this.contentMenuArray.length; i++) {
       this.menuContent = document.createElement("p");
       this.menuContent.className = "btn-container__menu-content";
@@ -56,6 +56,7 @@ List.prototype = {
         this.dropDownMenuContainer.append(this.menuContent);
       }
     }
+
     this.dropDownMenuContainer.style.display = "none";
 
     this.dropDownBtn.addEventListener("click", myBtn.bind(this));
@@ -68,3 +69,4 @@ List.prototype = {
     }
   },
 };
+// const uniqueChars = new UniqueItems(this.contentMenuArray);

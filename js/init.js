@@ -8,5 +8,6 @@
       console.log(data);
       list.discoverTrend(data.items);
       list.dropDownLanguage();
+      // const uniqueChars = new UniqueItems(["a", "a", "b", "c", "c", "d", "e"]);
     });
 })();
