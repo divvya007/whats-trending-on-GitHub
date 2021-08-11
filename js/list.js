@@ -27,6 +27,11 @@ function List(mainContainer) {
   this.dropDownMenuContainer = document.createElement("div");
   this.dropDownMenuContainer.className = "btn__btn-container";
   this.btnSpan.append(this.dropDownMenuContainer);
+  // text box div for drop down menu
+  this.textBoxOfMenu = document.createElement("div");
+  this.textBoxOfMenu.className = "Menu__textBoxOfMenu";
+  this.textBoxOfMenu.innerText = "Select a language";
+  this.dropDownMenuContainer.append(this.textBoxOfMenu);
 
   this.boxHead.append(this.language);
   this.listEl.append(this.boxHead);
