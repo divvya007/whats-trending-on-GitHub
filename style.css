@@ -159,7 +159,6 @@ h4 {
   overflow: auto;
   max-height: 400px;
   width: 300px;
-  padding: 8px 8px 8px 30px;
   position: absolute;
   z-index: 1;
 }

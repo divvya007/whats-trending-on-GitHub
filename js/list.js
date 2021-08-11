@@ -3,18 +3,18 @@ function List(mainContainer) {
   this.boxHead = document.createElement("div");
   this.boxHead.className = "listEl__box-header";
 
-  //   div for language
+  //div for language
   this.language = document.createElement("div");
   this.language.className = "listEl__box-header__language";
   this.language.className = "listEl__box-header__language--gray";
   this.language.innerText = "Language:";
 
-  //   span for btn
+  //span for btn
   this.btnSpan = document.createElement("span");
   this.btnSpan.className = "listEl__boxHeader__langugae__span";
   this.language.append(this.btnSpan);
 
-  //   btn
+  //btn
   this.dropDownBtn = document.createElement("button");
   this.dropDownBtn.className =
     "listEl__boxHeader__langugae__span__drop-down-btn--gray";
@@ -23,12 +23,12 @@ function List(mainContainer) {
   this.dropDownBtn.innerText = "Any";
   this.btnSpan.append(this.dropDownBtn);
 
-  // div for drop down menu
+  //div for drop down menu
   this.dropDownMenuContainer = document.createElement("div");
   this.dropDownMenuContainer.className = "btn__btn-container";
   this.btnSpan.append(this.dropDownMenuContainer);
 
-  // text box div for drop down menu
+  //text box div for drop down menu
   this.textBoxOfMenu = document.createElement("div");
   this.textBoxOfMenu.className = "Menu__textBoxOfMenu";
   this.textBoxOfMenu.innerText = "Select a language";
@@ -57,6 +57,12 @@ List.prototype = {
       this.menuContent.className = "btn-container__menu-content";
       this.menuContent.append(languageList[i]);
       this.dropDownMenuContainer.append(this.menuContent);
+    }
+
+    this.dropDownMenuContainer.addEventListener("click", menuItems.bind(this));
+    function menuItems(evt) {
+      let x = evt.target;
+      console.log(x);
     }
 
     this.dropDownMenuContainer.style.display = "none";
