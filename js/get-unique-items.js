@@ -12,5 +12,5 @@ function uniqueItems(arrayOfData) {
       uniqueArray.push(myArray[i]);
     }
   }
-  console.log(uniqueArray);
+  return uniqueArray;
 }

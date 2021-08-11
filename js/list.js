@@ -40,21 +40,17 @@ List.prototype = {
   discoverTrend: function (dataElements) {
     this.trendingDataList = dataElements.map((dataItem) => {
       this.contentMenuArray.push(dataItem.language);
-      //   console.log(this.contentMenuArray);
       return new RepoItems(this.listEl, dataItem);
     });
   },
 
   dropDownLanguage: function () {
-    for (let i = 0; i < this.contentMenuArray.length; i++) {
+    const languageList = uniqueItems(this.contentMenuArray);
+    for (let i = 0; i < languageList.length; i++) {
       this.menuContent = document.createElement("p");
       this.menuContent.className = "btn-container__menu-content";
-      if (this.contentMenuArray[i] === null) {
-        this.menuContent.style.display = "none";
-      } else {
-        this.menuContent.append(this.contentMenuArray[i]);
-        this.dropDownMenuContainer.append(this.menuContent);
-      }
+      this.menuContent.append(languageList[i]);
+      this.dropDownMenuContainer.append(this.menuContent);
     }
 
     this.dropDownMenuContainer.style.display = "none";
@@ -69,4 +65,3 @@ List.prototype = {
     }
   },
 };
-// const uniqueChars = new UniqueItems(this.contentMenuArray);
