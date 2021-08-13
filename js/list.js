@@ -62,7 +62,7 @@ List.prototype = {
     this.dropDownMenuContainer.addEventListener("click", menuItems.bind(this));
     function menuItems(evt) {
       let x = evt.target;
-      console.log(x);
+      // if(x.innerText===)
     }
 
     this.dropDownMenuContainer.style.display = "none";

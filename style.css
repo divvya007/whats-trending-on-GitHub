@@ -103,6 +103,7 @@ h4 {
 }
 
 .localStar__container {
+  background-color: inherit;
   color: #949ba3;
   cursor: pointer;
   padding: 3px 12px;

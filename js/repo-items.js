@@ -87,15 +87,17 @@ function RepoItems(containerEl, dataItems) {
   this.localStar = document.createElement("div");
   this.localStar.className = "localStar__container";
 
-  //span
+  //span, local star
   this.localStarSpan = document.createElement("span");
   this.localStarIcon = document.createElement("i");
   this.localStarIcon.innerHTML = '<i class="far fa-star"></i>';
-  this.localStarSpan.innerText = "Star";
-
   this.localStarSpan.append(this.localStarIcon);
   this.localStar.append(this.localStarSpan);
-  this.repoContainer.append(this.localStar);
 
+  this.spanForText = document.createElement("span");
+  this.spanForText.innerText = "Star";
+  this.localStar.append(this.spanForText);
+
+  this.repoContainer.append(this.localStar);
   containerEl.append(this.repoContainer);
 }
