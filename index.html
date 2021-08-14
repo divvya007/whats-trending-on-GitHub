@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>trending repository on github</title>
-    <link rel="stylesheet" href="./style.css"></link>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    </link>
   </head>
 
   <body id="body">
-    <div class = "text-box">
+    <!-- Header -->
+    <div class="text-box">
       <h1 id="text-box__heading--white" id="text-box__heading">Trending</h1>
-      <h4 id= "text-box__heading--gray">See what the GitHub community is most excited about today.</h4>
+      <h4 id="text-box__heading--gray">See what the GitHub community is most excited about today.</h4>
     </div>
+
+    <div id="dashboard" class="dashboard">
       
-    <div id="outer-div" class="outer-div__size" class="outer-div__flexProp">
+      <div id="filter-panel" class="dashboard__filterPanel">
+        <div id="filter-language" class="dashboard__filterLanguage">
+          <div>Language:</div>
+          
+          <!-- Language Menu -->
+          <div id="filter-language-menu" class="dashboard__filterLanguageMenu">
+            <button id="language-menu-button" class="dashboard__languageMenuButton">
+              Any
+            </button>
+            <div id="language-menu" class="dashboard__languageMenu dashboard__languageMenu--hidden">
+              <div class="Menu__textBoxOfMenu">Select a language</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Repositories List -->
+      <div id="outer-div" class="filterWrapper__list"></div>
     </div>
-   
-
-
     
+
+    <script src="./js/FilterPanel.js"></script>
     <script src="./js/list.js"></script>
     <script src="./js/repo-items.js"></script>
     <script src="./js/get-unique-items.js"></script>
     <script src="./js/filter-language.js"></script>
-    <script src="./js/init.js"></script> 
-   
+    <script src="./js/init.js"></script>
   </body>
 </html>
