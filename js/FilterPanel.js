@@ -1,13 +1,14 @@
-function FilterPanel() {
-	this.languageMenu = document.getElementById("language-menu")
-	this.dropDownBtn = document.getElementById("language-menu-button")
+function FilterPanel(onFilter) {
+	this.languageMenu = document.getElementById("language-menu");
+	this.dropDownBtn = document.getElementById("language-menu-button");
+	this.onFilter = onFilter;
 	this.dropDownBtn.addEventListener("click", this.handleOnButtonClick.bind(this));
 
 	window.addEventListener("click", this.handleOnWindowClick.bind(this));
 }
 
 FilterPanel.prototype = {
-	handleOnWindowClick: function (event) {
+	handleOnWindowClick: function () {
 		if (this.languageMenu.classList.contains("dashboard__languageMenu--visible")) {
 			this.languageMenu.classList.remove("dashboard__languageMenu--visible");
 			this.languageMenu.classList.add("dashboard__languageMenu--hidden");
@@ -33,24 +34,15 @@ FilterPanel.prototype = {
 			const menuItem = document.createElement("p");
 			menuItem.className = "btn-container__menu-content";
 			menuItem.append(language);
+			menuItem.addEventListener("click", () => {
+				this.handleOnLanguageClick(language);
+			});
 			this.languageMenu.append(menuItem);
 		}
+	},
 
-		// this.languageMenu.addEventListener("click", menuItems.bind(this));
-		// function menuItems(evt) {
-		// 	let x = evt.target;
-		// 	// if(x.innerText===)
-		// }
-
-		// this.languageMenu.style.display = "none";
-
-		// this.dropDownBtn.addEventListener("click", myBtn.bind(this));
-		// function myBtn() {
-		// 	if (this.languageMenu.style.display !== "block") {
-		// 		this.languageMenu.style.display = "block";
-		// 	} else if (this.languageMenu.style.display === "block") {
-		// 		this.languageMenu.style.display = "none";
-		// 	}
-		// }
+	handleOnLanguageClick: function (language) {
+		this.dropDownBtn.innerText = language;
+		this.onFilter(language);
 	}
 }

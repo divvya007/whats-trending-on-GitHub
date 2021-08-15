@@ -6,6 +6,7 @@ function List(listContainer) {
 
 List.prototype = {
   discoverTrend: function (dataElements) {
+    this.listContainer.innerHTML = "";
     this.trendingDataList = dataElements.map((dataItem) => {
       this.contentMenuArray.push(dataItem.language);
       return new RepoItems(this.listContainer, dataItem);
