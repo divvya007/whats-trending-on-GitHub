@@ -1,16 +1,14 @@
-function List(mainContainer) {
-  this.listEl = document.createElement("div");
-  this.listEl.className = "listElDiv";
+function List(listContainer) {
   this.trendingDataList = [];
   this.contentMenuArray = [];
-  mainContainer.append(this.listEl);
+  this.listContainer = listContainer;
 }
 
 List.prototype = {
   discoverTrend: function (dataElements) {
     this.trendingDataList = dataElements.map((dataItem) => {
       this.contentMenuArray.push(dataItem.language);
-      return new RepoItems(this.listEl, dataItem);
+      return new RepoItems(this.listContainer, dataItem);
     });
   },
 };

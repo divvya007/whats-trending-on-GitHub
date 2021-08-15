@@ -10,6 +10,8 @@ body {
   background-color: #1a202a;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  padding: 0;
+  background-color: #0d1117;
 }
 a {
   text-decoration: none;
@@ -23,31 +25,21 @@ h4 {
   margin: 0px;
 }
 
-.listElDiv {
-  display: flex;
-  flex-direction: column;
-  max-width: 1012px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
 .repoContainer--style {
   display: flex;
   flex-direction: row;
-  border: 1px solid rgb(70, 69, 69);
+  border: 1px solid #30363d;
   border-top: 0px;
   padding: 25px;
 }
 
 .text-box {
   padding: 5%;
-  border-bottom: 1px solid rgb(70, 69, 69);
+  border-bottom: 1px solid #30363d;
   align-content: center;
   font-weight: 800;
   font-style: italic;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 16px;
 }
 
 .repoHead--blue {
@@ -65,21 +57,6 @@ h4 {
 .forkIconContainer--style-size {
   padding: 20px;
   margin-top: 2px;
-}
-
-#text-box__heading--white {
-  color: #c9d1d9;
-}
-#text-box__heading--gray {
-  color: #525861;
-}
-
-#text-box__heading {
-  align-content: center;
-}
-
-.text-box {
-  text-align: center;
 }
 
 .repoHeadLink--white {
@@ -108,7 +85,7 @@ h4 {
 
 .btn-container__menu-content {
   cursor: pointer;
-  border: 1px solid rgb(92 72 72 / 35%);
+  border: 1px solid #30363d;
   margin: 0;
   padding: 8px;
 }
@@ -122,12 +99,15 @@ h4 {
 }
 
 .dashboard {
-
+  max-width: 1012px;
+  margin: 40px auto;
 }
 
 .dashboard__filterPanel {
   background-color: #161b22;
-  border: 1px solid rgb(70, 69, 69);
+  border: 1px solid #30363d;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: white;
   padding: 18px 36px;
   margin: 0;
@@ -162,7 +142,7 @@ h4 {
 .dashboard__languageMenu {
   background-color: #1c2128;
   color: #c9d1d9;
-  border: 2px solid #1c2128;
+  border: 2px solid #30363d;
   border-radius: 6px;
   overflow: auto;
   max-height: 400px;
@@ -176,4 +156,30 @@ h4 {
 }
 .dashboard__languageMenu--hidden {
   display: none;
+}
+
+.filterWrapper__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 40px 16px;
+}
+
+.header__title {
+  color: #c9d1d9;
+  margin: 0;
+}
+
+.header__subtitle {
+  margin: 8px;
+  color: #8b949e;
+  font-weight: normal;
 }
