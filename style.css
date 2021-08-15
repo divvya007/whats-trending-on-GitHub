@@ -183,3 +183,7 @@ h4 {
   color: #8b949e;
   font-weight: normal;
 }
+
+.localStar__icon {
+  padding-right: 4px;
+}
