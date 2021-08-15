@@ -1,7 +1,6 @@
 (function () {
   let repoData = null;
   function handleOnFilter(language) {
-    console.log('lang', language);
     list.discoverTrend(repoData.items.filter((item) => item.language === language));
   }
 
