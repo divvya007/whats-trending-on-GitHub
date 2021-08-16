@@ -89,6 +89,7 @@ function RepoItems(containerEl, dataItems) {
 
   //span, local star
   this.localStarSpan = document.createElement("span");
+  this.localStarSpan.className = 'localStar__icon';
   this.localStarIcon = document.createElement("i");
   this.localStarIcon.innerHTML = '<i class="far fa-star"></i>';
   this.localStarSpan.append(this.localStarIcon);
@@ -96,6 +97,7 @@ function RepoItems(containerEl, dataItems) {
 
   this.spanForText = document.createElement("span");
   this.spanForText.innerText = "Star";
+  this.spanForText.className = 'localStar__text';
   this.localStar.append(this.spanForText);
 
   this.repoContainer.append(this.localStar);
